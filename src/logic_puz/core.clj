@@ -18,11 +18,8 @@
    {:month :august :day 5}
    {:month :august :day 7}])
 
-(defn dont-know [knowledge]
-  (filter (fn [[_ v]] (> (count v) 1)) knowledge))
-
 (defn initial-knowledge [universe fn]
-  (seq (group-by fn universe)))
+  (group-by fn universe))
 
 (def initial-state
   {:antoine (initial-knowledge dates :month)
@@ -42,8 +39,8 @@
         determined-possibilities (filter deterministic? possibilities)
         eliminated-asserter-infos (extract-from-determined
                                    asserter-fn determined-possibilities)
-        new-asserter-data (filter (fn [[projection _]] (not (eliminated-asserter-infos
-                                                             projection)))
+        new-asserter-data (remove (fn [[projection _]] (eliminated-asserter-infos
+                                                        projection))
                                   (asserter state))
         new-other-data (map (fn [[projection data]]
                               [projection (remove #(eliminated-asserter-infos (asserter-fn %))
