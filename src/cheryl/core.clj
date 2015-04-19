@@ -73,7 +73,7 @@
 ; => {:antoine ([:june ({:day 6, :month :june})]), :bill ([6 ({:day 6, :month :june})])}
 
 (def ps-possible-pairs
-  (mapcat (fn [i] (map (fn [j] [i j]) (range (inc i) (- 101 i)))) (range 2 99)))
+  (mapcat (fn [i] (map (fn [j] [i j]) (range i (- 100 i)))) (range 2 99)))
 
 (defn p [[a b]] (* a b))
 (defn s [[a b]] (+ a b))
