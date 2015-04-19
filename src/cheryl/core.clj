@@ -1,4 +1,4 @@
-(ns logic-puz.core
+(ns cheryl.core
   (:gen-class))
 
 (defn -main

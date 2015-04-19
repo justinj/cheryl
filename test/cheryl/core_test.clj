@@ -1,6 +1,6 @@
-(ns logic-puz.core-test
+(ns cheryl.core-test
   (:require [clojure.test :refer :all]
-            [logic-puz.core :refer :all]))
+            [cheryl.core :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."

@@ -1,4 +1,4 @@
-# logic-puz
+# cheryl
 
 FIXME: description
 
@@ -10,7 +10,7 @@ Download from http://example.com/FIXME.
 
 FIXME: explanation
 
-    $ java -jar logic-puz-0.1.0-standalone.jar [args]
+    $ java -jar cheryl-0.1.0-standalone.jar [args]
 
 ## Options
 
